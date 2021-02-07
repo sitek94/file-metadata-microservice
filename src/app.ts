@@ -1,25 +1,9 @@
 import express from 'express';
 import cors from 'cors';
 import path from 'path';
-import mongoose from 'mongoose';
-
-import { MONGODB_URI } from './util/secrets';
 
 // Create Express server
 const app = express();
-
-// Connect to MongoDB
-const mongoUri = MONGODB_URI as string;
-
-mongoose
-  .connect(mongoUri, {
-    useNewUrlParser: true,
-    useCreateIndex: true,
-    useUnifiedTopology: true,
-    ignoreUndefined: true,
-  })
-  .then(() => console.log('✅ MongoDB connected...'))
-  .catch((err) => console.log('❌ MongoDB connection error...', err));
 
 // Express configuration
 app.set('port', process.env.PORT || 5000);
