@@ -160,7 +160,7 @@ button {
   background-color: var(--primary-color);
   border-radius: var(--border-radius);
   border: none;
-  transition: backround-color 300ms;
+  transition: background-color 300ms;
 }
 button:hover,
 button:focus {
