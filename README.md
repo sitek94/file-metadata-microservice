@@ -1,33 +1,21 @@
-# Node.js + TypeScript Template
+# File Metadata Microservice
 
-## Why?
+A microservice that reads metadata of the uploaded file.
 
-While going through freeCodeCamp's APIs and Microservices Projects and I found myself 
-repeatedly setting up each project in a very similar way. I thought that this template 
-might save some time in the future.
+This project is my solution for [APIs and Microservices Projects - File Metadata Microservice] and it's a part of APIs and Microservices Certification by [freeCodeCamp].
 
-## What's included?
+## Requirements
 
-* `typescript`
-* `express`
-* `dotenv`
-* `cors`
-* `nodemon`
-* `mongodb`|`mongoose`
+✅ You can submit a form that includes a file upload.
+
+✅ The form file input field has the `name` attribute set to `upfile`.
+
+✅ When you submit a file, you receive the file `name`, `type`, and `size` in bytes within the JSON response.
+
+[APIs and Microservices Projects - File Metadata Microservice]: https://www.freecodecamp.org/learn/apis-and-microservices/apis-and-microservices-projects/file-metadata-microservice
+[freeCodeCamp]: https://www.freecodecamp.org/
 
 ## Installation
-
-### MongoDB Atlas
-Use your existing account or create a new one. If you don't know how to do that, you can 
-follow [step by step tutorial by freeCodeCamp](https://www.freecodecamp.org/learn/apis-and-microservices/mongodb-and-mongoose/).
-
-Once you have connected to your cluster, use `.env.example` to create your `.env` file.
-
-```env
-MONGODB_URI=mongodb+srv://<user>:<password>@<cluster#-dbname>.mongodb.net/test
-
-MONGODB_URI_LOCAL=mongodb://localhost:27017/<db_name>
-```
 
 ### Install dependencies
 ```bash

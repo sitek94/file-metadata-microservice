@@ -1,6 +1,6 @@
 {
-  "name": "node-typescript-template",
-  "description": "Ready-to-go template for Node.js projects setup with TypeScript.",
+  "name": "file-metadata-microservice",
+  "description": "A microservice that reads metadata of the uploaded file.",
   "author": "Maciek Sitkowski",
   "version": "1.0.0",
   "main": "server.js",
