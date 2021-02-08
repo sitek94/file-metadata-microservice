@@ -4,25 +4,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <title>Node.js + TypeScript Template</title>
+  <title>File Metadata Microservice</title>
 </head>
 
 <body>
   <header>
-    <h1>Node.js + TypeScript Template</h1>
+    <h1 class="title">
+      <span>File</span><span class="primary-color">Metadata</span><wbr><span>Microservice</span>
+    </h1>
   </header>
 
   <main>
-    <img alt="Node.js logo" width="300" height="300"
-      src="https://raw.githubusercontent.com/gist/sitek94/a9f2139170ff48b5241671eec00a2bea/raw/nodejs.svg" />
-    <img alt="TypeScript logo" width="300" height="300"
-      src="https://gist.githubusercontent.com/sitek94/a9f2139170ff48b5241671eec00a2bea/raw/typescript.svg" />
+    <section>
+      <h2>Usage</h2>
+      <p>Please upload a file.</p>
+      <form>
+        <div class="file">
+          <input type="file" id="file" />
+          <label for="file">Choose file...</label>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
   </main>
 
   <footer>
     <p><a href="https://github.com/sitek94">Maciek Sitkowski</a> 2021</p>
   </footer>
+
+  <script>
+    const input = document.querySelector('input');
+    const label = document.querySelector('label');
+
+    input.addEventListener('change', (event) => {      
+      if (input.files.length) {
+        label.textContent = input.files[0].name;
+      }
+    });
+  </script>
 </body>
 
 </html>
