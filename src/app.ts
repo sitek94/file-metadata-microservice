@@ -1,6 +1,9 @@
 import express from 'express';
 import cors from 'cors';
 import path from 'path';
+import multer from 'multer';
+
+const upload = multer();
 
 // Create Express server
 const app = express();
@@ -18,6 +21,16 @@ app.use(express.static('public'));
 // Homepage route
 app.get('/', (req, res) => {
   res.sendFile(path.resolve('views/index.html'));
+});
+
+app.post('/api/fileanalyse', upload.single('upfile'), (req, res) => {
+  const { originalname, mimetype, size } = req.file;
+
+  return res.json({
+    name: originalname,
+    type: mimetype,
+    size,
+  });
 });
 
 export default app;
